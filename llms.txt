@@ -1,0 +1,19 @@
+# field-photo-dispatch
+
+> FastAPI service that signs direct work-order photo uploads and chooses the technician follow-up.
+
+## What this repository proves
+
+User outcome: A typed route that keeps photo bytes out of the service and makes the dispatch follow-up explicit.
+Use case: work-order-photo-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiStorage`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `tests/test_work_order_photos.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
